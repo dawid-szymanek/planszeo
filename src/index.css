@@ -1,13 +1,276 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Nunito,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E5DFDF;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#menu1 {
+  background-color: #fff;
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  height: 70px;
+  top: 0;
+}
+
+#search_bar {
+  width: 40%;
+  text-align: left;
+  top: 0;
+}
+
+#empty_space {
+  width: 20%;
+}
+
+#expandable_menu {
+  width: 40%;
+  text-align: right;
+}
+
+#expandable_menu button {
+  border: none;
+  font-weight: 600;
+  width: auto;
+}
+
+#expandable_menu button:hover {
+  background-color: #fff;
+  color: #201633;
+  cursor: pointer;
+}
+
+#expandable_menu a {
+  color: #7F4677;
+  background-color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  width: 100px;
+  height: 17px;
+}
+
+#menu2 {
+  background-color: #201633;
+  font-weight: bold;
+  color: #fff;
+  height: 50px;
+  font-size: 25px;
+}
+
+#menu3 {
+  background-color: #53875C;
+  font-weight: bold;
+  color: #fff;
+  height: 30px;
+  font-size: 20px;
+}
+
+#main {
+  text-align: center;
+  background-color: #fff;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.main_year, .side_year {
+  cursor: pointer;
+}
+
+#product_list {
+  margin-left: auto;
+}
+
+#year_text {
+  color: #fff;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  font-size: large;
+  font-weight: bold;
+}
+
+#side {
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 13%;
+  width: 130px;
+  height: 70%;
+  line-height: 30px;
+}
+
+#scroll_up {
+  text-align: center;
+  bottom: 80px;
+  right: 10px;
+  position: fixed;
+  background-color: #7F4677;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+#scroll_up:hover {
+  background-color: #201633;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  border-radius: 20px;
+  border: 2px solid #7F4677;
+  color: #7F4677;
+  width: 90px;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #7F4677;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+#mid {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+input[type=search] {
+  border-radius: 3px;
+  border: 1px solid #7F4677;
+  width: 400px;
+  height: 40px;
+}
+
+input[type=search]:focus {
+  border: 3px solid #7F4677;
+}
+
+table {
+  width: 100%;
+}
+
+.day {
+  width: 100%;
+  display: flex;
+}
+
+.day_image {
+  height: 100px;
+  margin-left: 20px;
+  margin-right: 150px;
+}
+
+.month_text {
+  color: #fff;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  margin-left: 20px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.day_text {
+  color: #fff;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.day_name {
+  color: #fff;
+  position: absolute;
+  z-index: 10;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 80px;
+  height: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product {
+  float: left;
+  text-decoration: none;
+  height: 300px;
+  width: 150px;
+}
+
+.product_name {
+  color: #7F4677;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.product_name:hover {
+  color: #201633;
+}
+
+#bottom_text {
+  text-align: left;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 14px;
+  color: #666
+}
+
+#footer {
+  background-color: #201633;
+  height: 300px;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer_list {
+  display: flex;
+  flex-direction: row;
+  line-height: 27px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+#footer a:hover {
+  color: #7F4677;
+}
+
+.footer_list {
+  text-align: left;
+}
+
+#footer_icons {
+  width: 200px;
 }
