@@ -72,6 +72,19 @@ html {
   font-size: 20px;
 }
 
+#menu2 a, #menu3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu2 a:hover {
+  color: #7F4677;
+}
+
+#menu3 a:hover {
+  color: #201633
+}
+
 #main {
   text-align: center;
   background-color: #fff;
