@@ -18,7 +18,8 @@ class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: product_list};
+      products: product_list
+    };
   }
   render() {
     return(
@@ -26,7 +27,7 @@ class Page extends React.Component {
         <Menu/>
         <SideMenu/>
         <a id="scroll_up" onClick={()=>{document.documentElement.scrollTop = 0}}>^</a>
-        <Main products={this.state.products}/>
+        <Main products={this.state.products} year={this.state.year}/>
         <div id="bottom_text"><br/><br/>
           Najlepsze gry planszowe, Wsiąść do Pociągu, Catan, Osadnicy z Catanu, najlepsze planszówki, Carcassonne gra, gry planszowe dla 2 osób, gry planszowe sklep, Splendor, Arnak, Everdell, tanie planszówki, gry na imprezę, Brass: Birmingham, Root, Tajniacy, 5 sekund, Pociągi gra planszowa, top gier planszowych, gry planszowe na prezent, Gloomhaven, Monopoly, Terraformacja Marsa, Scrabble cena, Azul, ranking gier planszowych, gry planszowe na imprezę, gry planszowe dla dzieci, top lista, aktualności gier planszowych, zapowiedzi gier, przedsprzedaże planszówek, kalendarz premier, Wiedźmin.
         </div><br/><br/><br/>
@@ -61,13 +62,13 @@ function Menu() {
         </tbody>
         </table>
       </div>
-      <div id="menu2"><a>APLIKACJA MOBILNA Planszeo</a></div>
-      <div id="menu3"><a>KALENDARZ premier i dodruków</a></div>
+      <div id="menu2"><a href="https://planszeo.pl/aplikacja-mobilna">APLIKACJA MOBILNA Planszeo</a></div>
+      <div id="menu3"><a href="https://planszeo.pl/kalendarz-premier-i-dodrukow">KALENDARZ premier i dodruków</a></div>
     </>
   );
 }
 
-function SideMenu() {
+function SideMenu(props) {
   return(
     <div id="side">
       <img src={boardnews} alt="Board News" width="50px" height="50px"/><br/>
@@ -102,7 +103,7 @@ function Main(props) {
       <img src={ontable} alt="On Table" width="80px" height="80px" id="mid"/>
       <img src={planszeo} alt="planszeo" width="130px" height="80px"/>
       <MonthSelect/><br/>
-      <ProductList products={props.products}/><br/>
+      <ProductList products={props.products} year={props.year}/><br/>
       <MonthSelect/><br/>
     </div>
   );
@@ -140,7 +141,7 @@ function ProductList(props) {
   let list = props.products;
   let list2021 = list.filter(product=>{return product.year==2021});
   let list2022 = list.filter(product=>{return product.year==2022});
-  if(false) {list = list2021;} else {list = list2022;}
+  if(props.year==2021) {list = list2021;} else {list = list2022;}
   return(
     <div id="product_list">
       <span id="year_text">{list[0].year}</span><img src={month_img}/>
@@ -319,9 +320,9 @@ function Footer() {
         </ul>
       </span>
       <span id="footer_icons">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i className="fa-brands fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#"><i className="fa-brands fa-instagram"></i></a>
       </span>
     </div>
   );
