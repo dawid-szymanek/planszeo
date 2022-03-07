@@ -272,10 +272,9 @@ function Product(props) {
   else a = <img src={dodruk} alt="dodruk"/>;
   return(
     <a href={props.product.link} className="product" target="_blank">
-      {a}<br/>
+      <br/>{a}<br/>
       <img src={product_photo} alt="product photo" width="150px" height="150px"/><br/>
       <span className="product_name">{props.product.name}</span>
-      <br/><br/><br/>
     </a>
   );
 }
