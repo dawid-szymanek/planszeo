@@ -39,6 +39,7 @@ html {
   border: none;
   font-weight: 600;
   width: auto;
+  background-color: #fff;
 }
 
 #expandable_menu button:hover {
@@ -54,6 +55,11 @@ html {
   font-weight: 500;
   width: 100px;
   height: 17px;
+}
+
+#expandable_menu a:hover {
+  color: #201633;
+  cursor: pointer;
 }
 
 #menu2 {
@@ -90,6 +96,7 @@ html {
   background-color: #fff;
   width: 80%;
   margin-left: 10%;
+  border-radius: 10px;
 }
 
 .main_year, .side_year {
@@ -117,13 +124,13 @@ html {
   top: 13%;
   width: 130px;
   height: 70%;
-  line-height: 30px;
+  line-height: 20px;
 }
 
 #scroll_up {
   text-align: center;
-  bottom: 80px;
-  right: 10px;
+  bottom: 5%;
+  right: 3%;
   position: fixed;
   background-color: #7F4677;
   color: #fff;
@@ -149,7 +156,7 @@ button {
   border-radius: 20px;
   border: 2px solid #7F4677;
   color: #7F4677;
-  width: 90px;
+  width: 70px;
 }
 
 button:hover {
@@ -169,7 +176,7 @@ ul, ol {
 input[type=search] {
   border-radius: 3px;
   border: 1px solid #7F4677;
-  width: 400px;
+  width: 300px;
   height: 40px;
 }
 
@@ -232,7 +239,7 @@ table {
 .product {
   float: left;
   text-decoration: none;
-  height: 300px;
+  height: 250px;
   width: 150px;
 }
 
